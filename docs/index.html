@@ -33,6 +33,30 @@
         <div id="vue-root"></div>
         
         <script type="text/javascript">
+           
+           (
+                function( global, factory ) {
+                    if( typeof define === 'function' && define.amd ) {
+                        define( [], factory );
+                    } else if( typeof exports === 'object' ) {
+                        module.exports = factory();
+                    } else {
+                        global.Octancle = factory();
+                    }
+                }
+                (
+                    this,
+                    function() {
+                        "use strict";
+                        
+                        function Octancle() {
+                            return "Y";
+                        }
+                        
+                        return Octancle;
+                    }
+                )
+            );
             
         </script>
         
